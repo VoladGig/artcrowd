@@ -25,5 +25,5 @@ export const router = createHashRouter([ // Используем HashRouter
     ],
   },
 ], {
-  basename: "/artcrowd", 
+ // basename: "/artcrowd", 
 });
