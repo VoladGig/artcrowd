@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createHashRouter } from "react-router"; // Меняем импорт
 import { Root } from "./pages/Root";
 import { Home } from "./pages/Home";
 import { Catalog } from "./pages/Catalog";
@@ -9,7 +9,7 @@ import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
 import { NotFound } from "./pages/NotFound";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([ // Используем HashRouter
   {
     path: "/",
     Component: Root,
@@ -24,4 +24,6 @@ export const router = createBrowserRouter([
       { path: "*", Component: NotFound },
     ],
   },
-]);
+], {
+  basename: "/artcrowd", 
+});
